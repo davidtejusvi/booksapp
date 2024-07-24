@@ -2,14 +2,17 @@ import React, { useState } from 'react'
 
 const CreateBook = ({ onCreate }) => {
     const [title, setTitle] = useState('');
+
     const handleChage = (event) => {
         setTitle(event.target.value);
     }
+
     const handleSubmit = (event) => {
         event.preventDefault();
         onCreate(title);
         setTitle('')
     }
+
     return (
         <div className='book-create'>
             <h3>Add a Book</h3>
@@ -29,4 +32,4 @@ const CreateBook = ({ onCreate }) => {
     )
 }
 
-export default CreateBook
+export default CreateBook;
