@@ -5,13 +5,13 @@ const CreateBook = ({ onCreate }) => {
 
     const handleChage = (event) => {
         setTitle(event.target.value);
-    }
+    };
 
     const handleSubmit = (event) => {
         event.preventDefault();
         onCreate(title);
         setTitle('')
-    }
+    };
 
     return (
         <div className='book-create'>

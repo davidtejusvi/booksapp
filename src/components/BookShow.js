@@ -13,7 +13,11 @@ const BookShow = ({ book, onDelete, onEdit }) => {
 
     let content = <h3>{book.title}</h3>
     if (showEdit) {
-        content = <EditBook book={book} onEdit={onEdit} setShowEdit={setShowEdit} />
+        content = <EditBook
+            book={book}
+            onEdit={onEdit}
+            setShowEdit={setShowEdit}
+        />
     }
     return (
         <div className='book-show'>
